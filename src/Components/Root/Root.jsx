@@ -1,16 +1,19 @@
 import React from 'react';
 import Header from '../Header/Header';
-import Home from '../Home/Home';
-import Mobiles from '../Mobiles/Mobiles';
 import { Outlet } from 'react-router';
+import Footer from '../Footer/Footer';
+import AsideNav from '../AsideNav/AsideNav';
+import './Root.css'
 
 const Root = () => {
     return (
         <div>
             <Header></Header>
-            <Outlet></Outlet>
-            {/* <Home></Home> */}
-            {/* <Mobiles></Mobiles> */}
+            <div className='root-aside'>
+                <AsideNav></AsideNav>
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
